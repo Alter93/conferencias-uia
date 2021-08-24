@@ -5,7 +5,8 @@ body {
 }
 
 .mapContainer {
- max-width: 1900px;
+width: 100%;
+max-width: 1900px;
 height: auto;
 margin: 0 auto;
 }
@@ -23,6 +24,7 @@ margin: 0 auto;
 #projectsvg {
   width: 100%;
      position: relative;
+    margin: 0 0 !important;
 /*
      
     width: 100%;
