@@ -7,8 +7,8 @@ class Prerregistro(models.Model):
     nombre = models.CharField(max_length=100)
     apellido = models.CharField(max_length=100)
     email = models.EmailField(unique=True)
-    comunidad = models.CharField(max_length=20)
-    cantidad_pagada = models.DecimalField(max_digits=7, decimal_places=2)
+    comunidad = models.CharField(max_length=100)
+    cantidad_pagada = models.DecimalField(max_digits=7, decimal_places=2, blank=True, null=True)
 
     class Meta:
         db_table = "prerregistro"
