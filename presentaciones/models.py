@@ -21,5 +21,6 @@ class Conferencia(models.Model):
     password_zoom = models.CharField(max_length=200, null=True)
     id_conferencista = models.ForeignKey('Conferencista', on_delete=models.CASCADE)
     uuid = models.UUIDField(primary_key=False, default=uuid.uuid4, editable=False)
+    
     def __str__(self):
         return '%s %s' % (self.titulo, self.fecha_hora)
