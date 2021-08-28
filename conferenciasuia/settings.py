@@ -141,3 +141,5 @@ LOGIN_URL = 'accounts/login'
 LOGOUT_URL = 'accounts/logout'
 LOGIN_REDIRECT_URL = '/'
 LOGOUT_REDIRECT_URL = '/accounts/login'
+
+X_FRAME_OPTIONS = 'SAMEORIGIN'
