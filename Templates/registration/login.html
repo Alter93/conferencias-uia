@@ -1,32 +1,82 @@
+<html lang="es">
 
-{% if form.errors %}
-<p>Your username and password didn't match. Please try again.</p>
-{% endif %}
-
-{% if next %}
-    {% if user.is_authenticated %}
-    <p>Your account doesn't have access to this page. To proceed,
-    please login with an account that has access.</p>
-    {% else %}
-    <p>Please login to see this page.</p>
-    {% endif %}
-{% endif %}
-
-<form method="post" action="{% url 'login' %}">
-{% csrf_token %}
-
-<div>
-  <td><label for="id_username">Username:</label></td>
-  <td><input type="text" name="username" autofocus autocapitalize="none" autocomplete="username" maxlength="150" required id="id_username"></td>
-</div>
-<div>
-  <td><label for="id_password">Password:</label></td>
-  <td><input type="password" name="password" autocomplete="current-password" required id="id_password"></td>
-</div>
+<head>
+    <link rel="stylesheet" href="/static/css/login_stylesheet.css" />
+    <link rel="stylesheet" href="/static/css/normalize.css" />
+    <link rel="stylesheet" href="/static/fonts/fontstylesheet.css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
 
 
-<div>
-  <input type="submit" value="login" />
-  <input type="hidden" name="next" value="{{ next }}" />
-</div>
-</form>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <title>AMEPSO - IBERO 2021 / XVIII CONGRESO MEXICANO DE PSICOLOGÍA SOCIAL. </title>
+</head>
+
+
+<body>
+
+    <div class="mainContainerLogin">
+
+        <div class="bannerDiv">
+            <figure class="bannerLogin"><img src="/Static/img/Banner_evento.jpg"></figure>
+        </div>
+
+        <div class="rightSide">
+            <div class="TituloyLogin">
+                
+                <div class="midColumn">
+                    <h1><span>XVIII<br></span> CONGRESO<br> MEXICANO<br> DE PSICOLOGÍA<br> SOCIAL</h1>
+                    <p>DEL 8 AL 10 DE SEPTIEMBRE</p>
+                    <p>/VIRTUAL</p>
+                </div>
+
+
+                <div class="contenedorLogin">
+                   
+                    
+                    <div class="errorCodes">{% if form.errors %}
+                    <p>Your username and password didn't match. Please try again.</p>
+                    {% endif %}
+
+                    {% if next %}
+                    {% if user.is_authenticated %}
+                    <p>Your account doesn't have access to this page. To proceed,
+                        please login with an account that has access.</p>
+                    {% else %}
+                    <p>Please login to see this page.</p>
+                    {% endif %}
+                    {% endif %}
+                        </div>
+                    
+                    
+                    <form method="post" action="{% url 'login' %}">
+                        {% csrf_token %}
+
+                        <div class="formularioInputs">
+                            <label for="id_username">CORREO:</label>
+                            <input type="text" name="username" autofocus autocapitalize="none" autocomplete="username" maxlength="150" required id="id_username">
+                        </div>
+                        <div class="formularioInputs">
+                            <label for="id_password">CONTRASEÑA:</label>
+                            <input type="password" name="password" autocomplete="current-password" required id="id_password">
+                        </div>
+
+
+                        <div class="botonSubmit">
+                            <input type="submit" value="ENTRAR" />
+                            <input type="hidden" name="next" value="{{ next }}" />
+                        </div>
+                    </form>
+                </div>
+            </div>
+            
+            <footer>
+            <figure><img src="/Static/img/Logo_IberoEducacion.png"></figure>
+                 <p>Sitio anexo a la Dirección de Educación Continua de la Universidad Iberoamericana Ciudad de México. <a href="https://www.diplomados.ibero.mx">www.diplomados.ibero.mx</a>. Consulta nuestro aviso de privacidad aquí.</p>
+            </footer>
+        </div>
+    </div>
+    
+</body>
+
+</html>
