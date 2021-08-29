@@ -21,8 +21,7 @@ class Prerregistro(models.Model):
         success = True
         try:
             usuario.save()
-
-        except Exception e:
+        except Exception as e:
             success = False
 
         if success:
