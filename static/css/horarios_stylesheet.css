@@ -39,7 +39,6 @@ nav-link:active {
 
 .barraAvisos{
     background-color: #FFC802;
-    height: 50px;
     padding: 10px 5%;
 }
 
@@ -153,5 +152,55 @@ body{
 
 .GridTable h5{
     font-weight: bold;
+}
+
+
+
+.speakersContainer {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-content: flex-start;
+    align-items: flex-start;
+}
+
+.singleSpeaker {
+    width: 300px;
+    padding: 1em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 4rem;
+}
+
+.singleSpeaker h4, .singleSpeaker h5{
+    text-align: center;
+}
+
+.singleSpeaker h5{
+    text-align: center;
+    font-weight: lighter;
+}
+
+.singleSpeaker figure img {
+  max-width: 150px;
+}
+
+.singleSpeaker figure img:hover {
+}
+
+.rsSpeakers {
+    width: 120px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    padding-top: 10px;
+
+}
+
+.rsSpeakers a:hover {
+    opacity: 0.75;
 }
 
