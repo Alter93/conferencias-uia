@@ -11,15 +11,15 @@ def cargar_usuarios(request):
 
 
     for i,row in df.iterrows():
-
-        registro = Prerregistro(
-            nombre = row['nombre'],
-            apellido = row['apellido'],
-            email = row['email'],
-            comunidad = row['comunidad'],
-            cantidad_pagada = row['cantidad_pagada']
-        )
         try:
+            registro = Prerregistro(
+                nombre = row['nombre'],
+                apellido = row['apellido'],
+                email = row['email'],
+                comunidad = row['comunidad'],
+                cantidad_pagada = row['cantidad_pagada']
+            )
+
             registro.save()
         except Exception as e:
             print(e)
