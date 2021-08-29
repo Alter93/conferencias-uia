@@ -1,0 +1,60 @@
+.nav-link.active{
+    background-color: #E64049 !important;
+            color: #FFF !important;
+
+}
+
+.nav-link:focus, .nav-link:active{
+        color: #FFF !important;
+
+    
+}
+ .nav-link{
+    color: #E64049 !important;
+    padding: 1.5rem 4rem !important;
+     font-weight: bold;
+     font-size: 1.5em;
+
+}
+
+
+.horarioFigure{
+    width: 700px;
+    height: auto;   
+    margin: 0 auto;
+}
+
+/* TABLES */
+
+.grow{
+    font-size: 1.3em; 
+}
+
+.bold{
+    font-weight: bolder;
+}
+
+.rojo{
+    color: white;
+    background-color: #E64049;
+}
+
+.grey{
+    background-color: #c7c7c7;
+}
+
+.darkgrey{
+    background-color: #4b4b4b;
+    color: white;
+}
+
+
+.GridTable{
+    margin-bottom: 50px;
+    text-align: center;
+}
+
+.GridTable div div{
+    border: 1px solid black;
+    padding: 10px;
+}
