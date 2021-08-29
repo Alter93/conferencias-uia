@@ -12,6 +12,53 @@
 
 <body>
 
+    <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
+        <div class="container-fluid">
+            <div class="col-2">
+                <a class="navbar-brand" href="home.html">
+                    <img src="/static/img/Logo_IberoEducacion.png" height="40" alt="">
+                </a>
+            </div>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarToggler" aria-controls="navbarToggler" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse col-8" id="navbarToggler">
+                <ul class="navbar-nav me-auto extended">
+                    <li class="nav-item">
+                        <a class="nav-link" href="home.html">LOBBY</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="horarios.html">PROGRAMA</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">EXPO</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            SALAS
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDropdownMenuLink">
+                            <li><a class="dropdown-item" href="#">AULA MAGNA</a></li>
+                            <li><a class="dropdown-item" href="#">SALA 1</a></li>
+                            <li><a class="dropdown-item" href="#">SALA 2</a></li>
+                            <li><a class="dropdown-item" href="#">SALA 3</a></li>
+                            <li><a class="dropdown-item" href="#">SALA 4</a></li>
+                            <li><a class="dropdown-item" href="#">SALA 5</a></li>
+                        </ul>
+                    </li>
+                </ul>
+
+
+            </div>
+        </div>
+    </nav>
+    
+    <div class="barraAvisos fixed-bottom">
+    <h4><b>EN VIVO AHORA:</b> AULA MAGNA - Public Health Communications during the COVID-19 Pandemic </h4>
+    </div>
+
+
+
     <div class="mapContainer">
         <figure id="projectsvg">
             <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 2500 1406" style="enable-background:new 0 0 2500 1406;" preserveAspectRatio="xMidYMid meet">
@@ -78,10 +125,6 @@
         </figure>
     </div>
 
-    <footer>
-
-
-    </footer>
 
 </body>
 

@@ -2,7 +2,50 @@ body {
     margin: 0;
     padding: 0;
     overflow-x: hidden;
+     font-family: 'gilroylight', Arial, sans-serif !important; 
+     background-color: lightgray !important;
+
 }
+
+.bold{
+    font-weight: bolder;
+    font-family: 'gilroyextrabold', Arial, sans-serif !important; 
+}
+
+
+/*  Menú global   */
+.navbar {
+    background-color: black !important;
+    width: 100%;
+    padding-left: 5rem !important;
+    padding-right: 5rem !important;
+}
+
+
+.nav-link {
+    text-transform: uppercase;
+    font-size: 20px;
+    color: white !important;
+    padding-left: 1em !important;
+    transition: 0.5s ease-in-out;
+}
+
+.nav-link:hover,
+nav-link:active {
+    color: #FFC802 !important;
+}
+
+.navbar-nav {
+    margin: 0 auto;
+}
+
+.barraAvisos{
+    background-color: #FFC802;
+    height: 50px;
+    padding: 10px 5%;
+}
+
+
 
 .mapContainer {
 width: 100%;
