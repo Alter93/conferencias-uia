@@ -1,4 +1,7 @@
 from django.contrib import admin
 from prerregistro.models import Prerregistro
+
 # Register your models here.
-admin.site.register(Prerregistro)
+@admin.register(Prerregistro)
+class PrerregistroAdmin(admin.ModelAdmin):
+    exclude = ('usuario_db',)
