@@ -10,6 +10,7 @@ var meetingNumber = document.getElementsByName("meetingNumber")[0].getAttribute(
 var userName = document.getElementsByName("userName")[0].getAttribute('content');
 var passWord = document.getElementsByName("passWord")[0].getAttribute('content');
 var userEmail = document.getElementsByName("userEmail")[0].getAttribute('content');
+var redirect = document.getElementsByName("redirect")[0].getAttribute('content');
 
 function websdkready() {
   var testTool = window.testTool;
@@ -22,8 +23,8 @@ function websdkready() {
     passWord: passWord,
     userEmail: userEmail,
     signature: signature,
-
-    leaveUrl: "/index",
+    leaveUrl: redirect,
+    
     role: 0,
     lang: 'es-ES',
     china: 0,
