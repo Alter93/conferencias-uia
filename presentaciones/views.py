@@ -34,7 +34,7 @@ def conferencia(request, conf_uid):
         'apiKey': ConferenciaZoom.API_KEY,
         'meetingNumber': zoom.conferencia.zoom_id,
         'userName': 'Alejandro',
-        'userEmail': 'alexae93@gmail.com',
+        'userEmail': 'aaaa@gmail.com',
         'passWord': zoom.conferencia.password_zoom,
         'redirect': request.path
     })
