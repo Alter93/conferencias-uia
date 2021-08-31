@@ -38,14 +38,14 @@ function websdkready() {
 
   // it's option if you want to change the WebSDK dependency link resources. setZoomJSLib must be run at first
   ZoomMtg.setZoomJSLib("https://source.zoom.us/1.9.8/lib", "/av"); // CDN version defaul
-
+  ZoomMtg.preLoadWasm();
   ZoomMtg.prepareJssdk();
   function beginJoin(signature) {
     ZoomMtg.init({
       leaveUrl: meetingConfig.leaveUrl,
       webEndpoint: meetingConfig.webEndpoint,
-      disableCORP: !window.crossOriginIsolated, // default true
-      // disablePreview: false, // default false
+      disableCORP: false, // default true
+      disablePreview: true, // default false
       success: function () {
         console.log(meetingConfig);
         console.log("signature", signature);
