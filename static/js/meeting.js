@@ -24,7 +24,7 @@ function websdkready() {
     userEmail: userEmail,
     signature: signature,
     leaveUrl: redirect,
-    
+
     role: 0,
     lang: 'es-ES',
     china: 0,
@@ -37,7 +37,7 @@ function websdkready() {
   console.log(JSON.stringify(ZoomMtg.checkSystemRequirements()));
 
   // it's option if you want to change the WebSDK dependency link resources. setZoomJSLib must be run at first
-  // ZoomMtg.setZoomJSLib("https://source.zoom.us/1.9.8/lib", "/av"); // CDN version defaul
+  ZoomMtg.setZoomJSLib("https://source.zoom.us/1.9.8/lib", "/av"); // CDN version defaul
 
   ZoomMtg.prepareJssdk();
   function beginJoin(signature) {
