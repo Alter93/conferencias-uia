@@ -44,7 +44,7 @@ function websdkready() {
     ZoomMtg.init({
       leaveUrl: meetingConfig.leaveUrl,
       webEndpoint: meetingConfig.webEndpoint,
-      disableCORP: false, // default true
+      disableCORP: !window.crossOriginIsolated, // default true
       disablePreview: true, // default false
       success: function () {
         console.log(meetingConfig);
