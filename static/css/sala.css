@@ -68,10 +68,27 @@ nav-link:active {
     padding-bottom: 0.5em;
 }
 
+.embeds{
+     display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+ 
+    
+}
+
 #container{
    padding-bottom:10%; 
     position:relative; 
     display:block; 
-   max-width:  70%;
+    max-width: 70%;
+}
+
+#chat{
+   padding-bottom:10%; 
+    position:relative; 
+    display:block; 
+    max-width:  30%;
+    height: 100%;
+    min-height: 400px;
 }
 
