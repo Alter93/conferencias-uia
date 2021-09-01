@@ -45,7 +45,7 @@ function websdkready() {
       leaveUrl: meetingConfig.leaveUrl,
       webEndpoint: meetingConfig.webEndpoint,
       disableCORP: !window.crossOriginIsolated, // default true
-      disablePreview: true, // default false
+      disablePreview: false, // default false
       success: function () {
         console.log(meetingConfig);
         console.log("signature", signature);
