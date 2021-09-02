@@ -34,19 +34,18 @@
                 <div class="contenedorLogin">
 
 
-                    <div class="errorCodes">{% if form.errors %}
-                    <p>Your username and password didn't match. Please try again.</p>
+                    {% if form.errors %}
+
+                    <p>Usuario y/o password incorrecto. Vuelva a intentarlo.</p>
                     {% endif %}
 
                     {% if next %}
                     {% if user.is_authenticated %}
-                    <p>Your account doesn't have access to this page. To proceed,
-                        please login with an account that has access.</p>
-                    {% else %}
-                    <p>Please login to see this page.</p>
+                    <p>No tienes suficientes privilegios para ver la página.</p>
+
                     {% endif %}
                     {% endif %}
-                        </div>
+
 
 
                     <form method="post" action="{% url 'login' %}">
