@@ -1,0 +1,240 @@
+body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+     font-family: 'gilroylight', Arial, sans-serif !important; 
+
+}
+
+.bold{
+    font-weight: bolder;
+    font-family: 'gilroyextrabold', Arial, sans-serif !important; 
+}
+
+/*  Menú global   */
+.navbar {
+    background-color: black !important;
+    width: 100%;
+    padding-left: 5rem !important;
+    padding-right: 5rem !important;
+}
+
+
+.navbar .nav-link {
+    text-transform: uppercase;
+    font-size: 20px;
+    color: white !important;
+    padding-left: 1em !important;
+    transition: 0.5s ease-in-out;
+}
+
+.navbar .nav-link:hover,
+nav-link:active {
+    color: #FFC802 !important;
+}
+
+.navbar .navbar-nav {
+    margin: 0 auto;
+}
+
+.barraAvisos{
+    background-color: #FFC802;
+    padding: 10px 5%;
+}
+
+
+
+
+.dosColumnas {
+    align-items: center;
+    margin: 0 auto !important;
+}
+
+.dosColumnas div {
+    height: 100%;
+}
+
+.dosColumnas figure {
+    width: 100%;
+    height: 100%;
+    margin: 0 !important;
+    
+}
+
+.libro{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+.dosColumnas  img{
+    max-height: 400px;
+    width: auto;
+    margin: auto 0 auto auto;
+}
+
+.libro a{
+    max-width: 200px;
+    padding: 10px;
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+.dosColumnas p {
+    color: #231F20;
+    max-width: 580px;
+    line-height: 1.4;
+    font-size: 1.2em
+}
+
+.dosColumnas h2 {
+    color: #E64049;
+    font-size: 4.5em;
+    max-width: 680px;
+    line-height: 1.1;
+    padding-bottom: 0.5em;
+}
+
+
+
+
+.mainContent {
+    background-color: white;
+    padding-bottom: 4em;
+}
+
+.mainContent .nav-link.active{
+    background-color: #E64049 !important;
+            color: #FFF !important;
+
+}
+
+.mainContent .nav-link:focus, .nav-link:active{
+        color: #FFF !important;
+
+    
+}
+ .mainContent .nav-link{
+    color: #E64049 !important;
+    padding: 1.5rem 4rem !important;
+     font-weight: bold;
+     font-size: 1.5em;
+
+}
+
+
+.mainContent .horarioFigure{
+    width: 700px;
+    height: auto;   
+    margin: 0 auto;
+}
+
+/* TABLES Y FONTS */
+
+.bold{
+    font-weight: bolder;
+    font-family: 'gilroyextrabold', Arial, sans-serif !important; 
+}
+
+body{
+ font-family: 'gilroylight', Arial, sans-serif !important; 
+}
+
+.grow{
+    font-size: 1.3em; 
+}
+
+
+.rojo{
+    color: white;
+    background-color: #E64049;
+}
+
+.grey{
+    background-color: #c7c7c7;
+}
+
+.darkgrey{
+    background-color: #4b4b4b;
+    color: white;
+}
+
+
+.GridTable{
+    margin-bottom: 50px;
+    text-align: center;
+}
+
+.GridTable div div{
+    border: 1px solid black;
+    padding: 10px;
+}
+
+.GridTable h5{
+    font-weight: bold;
+}
+
+.tab-content h3{
+    margin: 30px auto;
+    text-align: center;
+    font-size: 40px;
+    font-weight: bold;
+}
+
+.speakersContainer {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-content: flex-start;
+    align-items: flex-start;
+}
+
+.singleSpeaker {
+    width: 450px;
+    padding: 1em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 4rem;
+}
+
+.singleSpeaker h4, .singleSpeaker h5{
+    text-align: center;
+}
+
+.singleSpeaker h5{
+    text-align: center;
+    font-weight: lighter;
+}
+
+.singleSpeaker figure img {
+  max-width: 250px;
+}
+
+.singleSpeaker figure img:hover {
+}
+
+.rsSpeakers {
+    width: 120px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    padding-top: 10px;
+
+}
+
+.rsSpeakers a{
+        padding: 10px;
+    border-radius: 50%;
+
+}
+.rsSpeakers a:hover {
+    background-color:  #E64049;
+}
+
+.rsSpeakers a:active {
+background-color:  #E64049;
+}
+
