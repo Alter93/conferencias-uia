@@ -125,17 +125,38 @@ body {
 
 footer {
     width: 100%;
+    height: auto;
+
+}
+
+footer div {
+    width: 100%;
+    max-width: 1100px;
     max-height: 200px;
+    margin: 0 auto;
     display: flex !important;
     flex-direction: row;
-    align-content: flex-start;
+    align-content: center;
+    justify-content: flex-start;
 }
 
 footer figure {
     height: 80px;
     width: auto;
+    margin-right: 25px
 }
 
 footer figure img {
     height: 100%;
+}
+
+footer p{
+    margin: auto 0;
+    width: 100%;
+    max-width: 640px;
+}
+
+footer p a{
+    color: #231F20;
+    font-weight: bold;
 }
