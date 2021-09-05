@@ -4,6 +4,7 @@ from django.shortcuts import redirect
 from django.http import HttpResponse
 from django.utils import timezone
 from presentaciones.models import Conferencia
+from prerregistro.models import Prerregistro
 
 from presentaciones.presentacion_util import ConferenciaZoom
 
@@ -19,7 +20,7 @@ def en_vivo(request):
     conferencias = Conferencia.objects.filter(
         fecha_hora__lte=fecha
     ).order_by('lugar')
-    
+
     conferencias_filtradas = []
     for conferencia in conferencias:
         if (conferencia.fecha_hora + conferencia.duracion > fecha):
@@ -48,26 +49,41 @@ def ponentes(request):
 
 def conferencia(request, conf_uid):
     if request.user.is_authenticated:
+        try:
+            prerregistro = Prerregistro.objects.get(
+                usuario_db = request.user
+            )
+            nombre = prerregistro.Nombre
+        except Prerregistro.DoesNotExist as e:
+            nombre = request.user.username
         zoom = ConferenciaZoom(conf = conf_uid)
         print(zoom.conferencia.titulo)
         return render(request, 'conferencia/meeting.html', {
             'signature': zoom.signature,
             'apiKey': ConferenciaZoom.API_KEY,
             'meetingNumber': zoom.conferencia.zoom_id,
-            'userName': 'Alejandro',
+            'userName': nombre,
             'userEmail': 'aaaa@gmail.com',
             'passWord': zoom.conferencia.password_zoom,
-            'redirect': request.path
+            'redirect': request.path,
         })
     else:
         return redirect('%s?next=%s' % (settings.LOGIN_URL, request.path))
 
 def visitar_sala(request, id_sala):
     if request.user.is_authenticated:
+        try:
+            prerregistro = Prerregistro.objects.get(
+                usuario_db = request.user
+            )
+            nombre = prerregistro.Nombre
+        except Prerregistro.DoesNotExist as e:
+            nombre = request.user.username
         conferencia = ConferenciaZoom(lugar = id_sala).conferencia
         return render(request, 'sala.html', {
             'conf': conferencia,
             'lugar': id_sala,
+            'chat_name': nombre
         })
     else:
         return redirect('%s?next=%s' % (settings.LOGIN_URL, request.path))
