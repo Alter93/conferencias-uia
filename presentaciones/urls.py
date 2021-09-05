@@ -8,4 +8,5 @@ urlpatterns = [
 
     path('conferencia/sala/<int:id_sala>', views.visitar_sala, name='sala'),
     path('conferencia/<uuid:conf_uid>', views.conferencia, name='conferencia'),
+    path('conferencia/envivo', views.en_vivo, name='envivo'),
 ]

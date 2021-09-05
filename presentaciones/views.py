@@ -1,6 +1,9 @@
 from django.shortcuts import render
 from django.conf import settings
 from django.shortcuts import redirect
+from django.http import HttpResponse
+from django.utils import timezone
+from presentaciones.models import Conferencia
 
 from presentaciones.presentacion_util import ConferenciaZoom
 
@@ -10,6 +13,26 @@ def home(request):
         return render(request, 'home.html', {})
     else:
         return redirect('%s?next=%s' % (settings.LOGIN_URL, request.path))
+
+def en_vivo(request):
+    fecha = timezone.now()
+    conferencias = Conferencia.objects.filter(
+        fecha_hora__lte=fecha
+    ).order_by('lugar')
+    
+    conferencias_filtradas = []
+    for conferencia in conferencias:
+        if (conferencia.fecha_hora + conferencia.duracion > fecha):
+            conferencias_filtradas.append(conferencia)
+    if len(list(conferencias_filtradas)) == 0:
+        texto_en_vivo = " - "
+    else:
+        conferencia = conferencias_filtradas[0]
+        if conferencia.lugar == "0":
+            texto_en_vivo = "Aula Magna - " + conferencia.titulo
+        else:
+            texto_en_vivo = "Sala " + conferencia.lugar + " - " + conferencia.titulo
+    return HttpResponse(texto_en_vivo)
 
 def horarios(request):
     if request.user.is_authenticated:

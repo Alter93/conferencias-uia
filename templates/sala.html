@@ -34,7 +34,7 @@
                         <a class="nav-link" href="/horarios">PROGRAMA</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="/ponentes">EXPO</a>
+                        <a class="nav-link" href="/expo">EXPO</a>
                     </li>
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -57,7 +57,7 @@
     </nav>
 
     <div class="barraAvisos fixed-bottom">
-    <h4><b>EN VIVO AHORA:</b> AULA MAGNA - Public Health Communications during the COVID-19 Pandemic </h4>
+    <h4><b>EN VIVO AHORA:</b> <span id="envivo">?<span> </h4>
     </div>
 
     <div class="dosColumnas row g-12 mainContent container">
@@ -106,5 +106,21 @@
 
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
+<script>
+    function cargarEnVivo(){
+        var client = new XMLHttpRequest();
+        client.open('GET', '/conferencia/envivo');
+        client.onreadystatechange = function() {
+            if (client.readyState === 4){
+                document.getElementById("envivo").textContent=client.responseText;
+            }
+        }
+        client.send();
+        setTimeout(cargarEnVivo, 5000);
+    }
+    window.onload = function () {
+        cargarEnVivo();
 
+    }
+</script>
 </html>

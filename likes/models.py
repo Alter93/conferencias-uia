@@ -34,7 +34,7 @@ class Cartel(models.Model):
             "imagen": self.imagen,
             "numero": numero,
             "categoria": self.categoria,
-            "url_voto": f"/likes/registrar/{id_usuario}/{self.id}",
+            "url_voto": f"/likes/registrar/{self.id}",
             "voto":gracias
         })
         return html
