@@ -29,6 +29,7 @@ class Cartel(models.Model):
             gracias = None
 
         html = render_to_string("cartel.html",{
+            "id": self.id,
             "titulo": self.titulo,
             "imagen": self.imagen,
             "numero": numero,
