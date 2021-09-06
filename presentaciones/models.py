@@ -18,7 +18,7 @@ class Conferencia(models.Model):
     duracion = models.DurationField()
     lugar = models.CharField(max_length=200)
     zoom_id = models.CharField(max_length=200)
-    password_zoom = models.CharField(max_length=200, null=True)
+    password_zoom = models.CharField(max_length=200, null=True, blank=True)
     id_conferencista = models.ForeignKey('Conferencista', on_delete=models.CASCADE)
     uuid = models.UUIDField(primary_key=False, default=uuid.uuid4, editable=False)
 

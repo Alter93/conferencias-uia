@@ -17,7 +17,9 @@ class Prerregistro(models.Model):
         return '%s %s' % (self.nombre, self.apellido)
 
     def save(self, *args, **kwargs):
-        usuario = User.objects.create_user(slugify(self.nombre + "-" + self.apellido) , self.email, 'W3lcome2!')
+        usuario = User.objects.create_user(username = self.email, email = self.email, password = 'Ibero-amepso21')
+        usuario.first_name = self.nombre
+        usuario.last_name = self.apellido
         success = True
         try:
             usuario.save()

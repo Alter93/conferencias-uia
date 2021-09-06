@@ -8,6 +8,14 @@ from prerregistro.models import Prerregistro
 
 from presentaciones.presentacion_util import ConferenciaZoom
 
+chat_ids = ["str"] * 6
+chat_ids[0] = "5P0zQBeDb"
+chat_ids[1] = "WoK1w_ogm"
+chat_ids[2] = "VptaZdj3F"
+chat_ids[3] = "CmjkD-okh"
+chat_ids[4] = "jH9b6e_x4"
+chat_ids[5] = "KDoi834zH"
+
 # Create your views here.
 def home(request):
     if request.user.is_authenticated:
@@ -26,7 +34,7 @@ def en_vivo(request):
         if (conferencia.fecha_hora + conferencia.duracion > fecha):
             conferencias_filtradas.append(conferencia)
     if len(list(conferencias_filtradas)) == 0:
-        texto_en_vivo = " - "
+        texto_en_vivo = "Por el momento no hay conferencias en vivo. "
     else:
         conferencia = conferencias_filtradas[0]
         if conferencia.lugar == "0":
@@ -49,21 +57,14 @@ def ponentes(request):
 
 def conferencia(request, conf_uid):
     if request.user.is_authenticated:
-        try:
-            prerregistro = Prerregistro.objects.get(
-                usuario_db = request.user
-            )
-            nombre = prerregistro.Nombre
-        except Prerregistro.DoesNotExist as e:
-            nombre = request.user.username
         zoom = ConferenciaZoom(conf = conf_uid)
         print(zoom.conferencia.titulo)
         return render(request, 'conferencia/meeting.html', {
             'signature': zoom.signature,
             'apiKey': ConferenciaZoom.API_KEY,
             'meetingNumber': zoom.conferencia.zoom_id,
-            'userName': nombre,
-            'userEmail': 'aaaa@gmail.com',
+            'userName': request.user.first_name,
+            'userEmail': request.user.email,
             'passWord': zoom.conferencia.password_zoom,
             'redirect': request.path,
         })
@@ -71,19 +72,14 @@ def conferencia(request, conf_uid):
         return redirect('%s?next=%s' % (settings.LOGIN_URL, request.path))
 
 def visitar_sala(request, id_sala):
+
     if request.user.is_authenticated:
-        try:
-            prerregistro = Prerregistro.objects.get(
-                usuario_db = request.user
-            )
-            nombre = prerregistro.Nombre
-        except Prerregistro.DoesNotExist as e:
-            nombre = request.user.username
         conferencia = ConferenciaZoom(lugar = id_sala).conferencia
         return render(request, 'sala.html', {
             'conf': conferencia,
             'lugar': id_sala,
-            'chat_name': nombre
+            'chat_name': request.user.first_name,
+            'chat_id': chat_ids[id_sala]
         })
     else:
         return redirect('%s?next=%s' % (settings.LOGIN_URL, request.path))
