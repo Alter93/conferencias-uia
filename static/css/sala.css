@@ -91,7 +91,7 @@ nav-link:active {
     flex-direction: row;
     flex-wrap: wrap;
     min-height: 60vh;
-    height: 600px;
+    height: 800px;
     width: 100%;
     justify-content: center;
     background-color: black;
@@ -101,13 +101,14 @@ nav-link:active {
    padding-bottom:10%; 
     position:relative; 
     display:block; 
-    max-width: 70%;
+    max-width: 60%;
+    height: 800px;
 }
 
 #chat{
     position:relative; 
     display:block; 
-    height: 600px;
+    height: 800px;
 }
 
 .decoTecho{
