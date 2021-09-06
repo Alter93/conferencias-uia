@@ -39,7 +39,23 @@ nav-link:active {
 
 .barraAvisos{
     background-color: #FFC802;
-    padding: 10px 5%;
+    padding: 10px 0;
+     display: flex;
+    flex-direction: row;
+    flex-wrap:nowrap;
+    justify-content:space-between;
+}
+
+.barraAvisos div{
+    display: flex;
+    flex-direction: column;
+    flex-wrap:nowrap;
+    justify-content: flex-start;
+}
+
+.barraAvisos div h3{
+    margin: 0 20px 0 50px !important;
+    padding: 0;
 }
 
 

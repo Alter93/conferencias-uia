@@ -1,23 +1,25 @@
 <html>
 
 <head>
-    <link rel="stylesheet" href="/static/css/sala.css" />
+    <link rel="stylesheet" href="/static/css/expo_stylesheet.css" />
     <link rel="stylesheet" href="/static/css/normalize.css" />
     <link rel="stylesheet" href="/static/fonts/fontstylesheet.css" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
-
-    <!--    SCROLLING TEXT-->
+    
+<!--    SCROLLING TEXT-->
     <script src="https://cdn.jsdelivr.net/npm/node-marquee@1.0.15/dist/cdn/index.min.js" crossorigin="anonymous"></script>
+    
+
 
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <title>CONFERENCIAS / AMEPSO - IBERO 2021 / XVIII CONGRESO MEXICANO DE PSICOLOGÍA SOCIAL. </title>
+    <title>INFORMES / AMEPSO - IBERO 2021 / XVIII CONGRESO MEXICANO DE PSICOLOGÍA SOCIAL. </title>
 </head>
 
 <body>
 
 
-     <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
+    <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
         <div class="container-fluid">
             <div class="col-2">
                 <a class="navbar-brand" href="/">
@@ -69,56 +71,61 @@
                 </div>
     </div>
 
+
     <div class="dosColumnas row g-12 mainContent container">
             <div class="col-lg ">
-                {% if lugar > 0 %}
-                <h2 class="bold">SALA {{ lugar }}</h2>
-                {% else %}
-                <h2 class="bold">AULA MAGNA</h2>
-                {% endif %}
+                <figure><img class="img-fluid" src="/static/img/Kioscos-02.png"></figure>
             </div>
-            <div class="col-lg p-3 align-middle">
-                {% if conf %}
-
-                <p class="bold" >{{ conf.titulo }}</p>
-                <p>{{ conf.id_conferencista.nombre }} {{ conf.id_conferencista.apellido }}</p>
-
-                {% else %}
-
-                <p class="bold" >No hay ninguna conferencia. Vuelve más tarde.</p>
-                <p><a class="nav-link" href="/horarios">Ver agenda.</a></p>
-
-                {% endif %}
-
-
+            <div class="col-lg p-5 align-middle">
+                <h2 class="bold">INFORMES </h2>
+                <p>El evento tiene como finalidad difundir la investigación contemporánea que aborda las problemáticas actuales que se experimentan en México a través de los ejes culturales, sociales y relaciones interpersonales generando espacios de discusión y colaboración académica entre estudiantes e investigadores.
+                Programa sujeto a cambios sin previo aviso.
+                </p>
             </div>
         </div>
-            <div class="decoTecho">
             
-            </div>
-            
-<div class="embeds">
-    <div id="ContainerVideo" class="ratio ratio-16x9">
-        {% if conf %}
-        <iframe id="ViostreamIframe" width="100%" height="100%" src="/conferencia/{{ conf.uuid }}" frameborder="0" allowfullscreen="" style="position:absolute; top:0; left: 0"></iframe>
-        {% endif %}
-
-
-
+            <div class="accordion container" id="accordionExample">
+  <div class="accordion-item">
+    <h2 class="accordion-header" id="headingOne">
+      <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+        Accordion Item #1
+      </button>
+    </h2>
+    <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+      <div class="accordion-body">
+        <strong>This is the first item's accordion body.</strong> It is shown by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+      </div>
     </div>
-     <div id="chat" class="">
-        {% if conf %}
-        <iframe src="https://deadsimplechat.com/95UCqhpYC?username={{ chat_name }}" width="100%" height="100%"></iframe>
-        {% endif %}
+  </div>
+  <div class="accordion-item">
+    <h2 class="accordion-header" id="headingTwo">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+        Accordion Item #2
+      </button>
+    </h2>
+    <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+      <div class="accordion-body">
+        <strong>This is the second item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+      </div>
     </div>
-
+  </div>
+  <div class="accordion-item">
+    <h2 class="accordion-header" id="headingThree">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+        Accordion Item #3
+      </button>
+    </h2>
+    <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+      <div class="accordion-body">
+        <strong>This is the third item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+      </div>
+    </div>
+  </div>
 </div>
-            <div class="decoPublico">
             
-            </div>
-
-
-</body>
+            
+            
+            </body>
 
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
@@ -140,7 +147,9 @@
     }
 </script>
         
-         <!--    SCROLLING TEXT-->
+        
+        
+        <!--    SCROLLING TEXT-->
         <script>
         
  nodeMarquee({
@@ -150,4 +159,5 @@
 
             
         </script>
+        
 </html>

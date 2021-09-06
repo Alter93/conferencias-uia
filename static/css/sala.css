@@ -40,13 +40,31 @@ nav-link:active {
 
 .barraAvisos{
     background-color: #FFC802;
-    padding: 10px 5%;
+    padding: 10px 0;
+     display: flex;
+    flex-direction: row;
+    flex-wrap:nowrap;
+    justify-content:space-between;
 }
+
+.barraAvisos div{
+    display: flex;
+    flex-direction: column;
+    flex-wrap:nowrap;
+    justify-content: flex-start;
+}
+
+.barraAvisos div h3{
+    margin: 0 20px 0 50px !important;
+    padding: 0;
+}
+
 
 
 .dosColumnas {
     align-items: center;
     margin: 0 auto !important;
+    height: auto;
 }
 
 .dosColumnas div {
@@ -69,14 +87,17 @@ nav-link:active {
 }
 
 .embeds{
-     display: flex;
+    display: flex;
     flex-direction: row;
     flex-wrap: wrap;
- 
-    
+    min-height: 60vh;
+    height: 600px;
+    width: 100%;
+    justify-content: center;
+    background-color: black;
 }
 
-#container{
+#containerVideo{
    padding-bottom:10%; 
     position:relative; 
     display:block; 
@@ -84,11 +105,21 @@ nav-link:active {
 }
 
 #chat{
-   padding-bottom:10%; 
     position:relative; 
     display:block; 
-    max-width:  30%;
-    height: 100%;
-    min-height: 400px;
+    height: 600px;
 }
 
+.decoTecho{
+background: url("/static/img/techo_sala.jpg") no-repeat center center;
+    height: 200px;
+    width: 100%;
+    
+}
+
+.decoPublico{
+background: url("/static/img/publico_sala3.jpg") no-repeat center center;
+    height: 400px;
+    width: 100%;
+    
+}
