@@ -5,6 +5,7 @@ from django.http import HttpResponse
 from django.utils import timezone
 from presentaciones.models import Conferencia
 from prerregistro.models import Prerregistro
+from django.utils.safestring import mark_safe
 
 from presentaciones.presentacion_util import ConferenciaZoom
 
@@ -30,17 +31,24 @@ def en_vivo(request):
     ).order_by('lugar')
 
     conferencias_filtradas = []
+    texto_en_vivo = ""
     for conferencia in conferencias:
         if (conferencia.fecha_hora + conferencia.duracion > fecha):
             conferencias_filtradas.append(conferencia)
+
     if len(list(conferencias_filtradas)) == 0:
         texto_en_vivo = "Por el momento no hay conferencias en vivo. "
     else:
-        conferencia = conferencias_filtradas[0]
-        if conferencia.lugar == "0":
-            texto_en_vivo = "Aula Magna - " + conferencia.titulo
-        else:
-            texto_en_vivo = "Sala " + conferencia.lugar + " - " + conferencia.titulo
+        texto_en_vivo = " "
+        for conferencia in conferencias_filtradas:
+            if conferencia.lugar == "0":
+                texto_en_vivo += "Aula Magna - " + conferencia.titulo + " • "
+            else:
+                texto_en_vivo += "Sala " + conferencia.lugar + " - " + conferencia.titulo + " • "
+
+    while len(texto_en_vivo) < 75:
+        texto_en_vivo += texto_en_vivo
+
     return HttpResponse(texto_en_vivo)
 
 def horarios(request):

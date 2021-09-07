@@ -66,22 +66,16 @@
     </nav>
 
       <div class="barraAvisos fixed-bottom">
-        <div><h3 class="bold">EN VIVO AHORA:</h3>
+        <div>
             <div class="textoScroll bg-text-container">
-                <h4 class='animate-text left'><span id="envivo">Por el momento no hay conferencias en vivo.</span> </h4>
+                <h4 class='animate-text left'><strong>EN VIVO AHORA: </strong> <span id="envivo" >Por el momento no hay conferencias en vivo. Por el momento no hay conferencias en vivo. Por el momento no hay conferencias en vivo.</span> </h4>
                 </div>
                 </div>
     </div>
-            
-            
-             <div class=" textoScroll bg-text-container">
-            <div class="animate-text left">
-                <span>Por el momento no hay conferencias en vivo.&nbsp; </span>
-                <span>Por el momento no hay conferencias en vivo.&nbsp; </span>
-                <span>Por el momento no hay conferencias en vivo.&nbsp; </span>
-            </div>
-        </div>
-            
+
+
+
+
 
 
     <div class="dosColumnas row g-12 mainContent container">
@@ -109,7 +103,7 @@
             <li class="nav-item" role="presentation">
                 <button class="nav-link" id="pills-profile-tab" data-bs-toggle="pill" data-bs-target="#pills-profile" type="button" role="tab" aria-controls="pills-profile" aria-selected="false">Día 2</button>
             </li>
-           
+
         </ul>
 
 
@@ -137,7 +131,7 @@
 
                 </div>
             </div>
-            
+
         </div>
 
 
@@ -156,11 +150,12 @@
                 document.getElementById("envivo").textContent=client.responseText;
             }
         }
+
         client.send();
-        setTimeout(cargarEnVivo, 5000);
+        setTimeout(cargarEnVivo, 300000);
     }
     window.onload = function () {
-        cargarEnVivo();
+        setTimeout(cargarEnVivo, 500);
 
     }
 </script>
