@@ -224,7 +224,7 @@ body{
 }
 
 .singleSpeaker {
-    width: 450px;
+    width: 400px;
     padding: 1em;
     display: flex;
     flex-direction: column;
