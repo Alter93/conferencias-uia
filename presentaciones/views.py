@@ -49,6 +49,12 @@ def horarios(request):
     else:
         return redirect('%s?next=%s' % (settings.LOGIN_URL, request.path))
 
+def informacion(request):
+    if request.user.is_authenticated:
+        return render(request, 'informes.html', {})
+    else:
+        return redirect('%s?next=%s' % (settings.LOGIN_URL, request.path))
+
 def ponentes(request):
     if request.user.is_authenticated:
         return render(request, 'ponentes.html', {})
