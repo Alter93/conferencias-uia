@@ -57,6 +57,7 @@ nav-link:active {
     margin: 0 20px 0 50px !important;
     padding: 0;
     text-align: right;
+    width: 300px;
 }
 
 
@@ -318,4 +319,16 @@ body{
 .rsSpeakers a:active {
 background-color:  #E64049;
 }
+
+
+@media (max-width: 768px) {
+
+.dosColumnas h2 {
+    font-size: 2.5em;
+    max-width: 680px;
+ 
+}
+
+}
+
 
