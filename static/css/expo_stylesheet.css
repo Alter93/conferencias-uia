@@ -77,6 +77,23 @@ nav-link:active {
     
 }
 
+.avisos{
+    margin: 50px auto;
+}
+
+.avisos h2{
+    color: #E64049;
+    margin-bottom: 25px;
+    text-align: center
+}
+
+.listas{
+      list-style-type: square;
+      font-size: 18px;
+        max-width: 820px;
+    margin: 0 auto;
+}
+
 .libro{
     display: flex;
     flex-direction: column;
@@ -116,7 +133,7 @@ nav-link:active {
 
 .mainContent {
     background-color: white;
-    padding-bottom: 4em;
+    padding-bottom: 6em;
 }
 
 .mainContent .nav-link.active{
@@ -207,7 +224,7 @@ body{
 }
 
 .singleSpeaker {
-    width: 450px;
+    width: 400px;
     padding: 1em;
     display: flex;
     flex-direction: column;
