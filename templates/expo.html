@@ -5,8 +5,8 @@
     <link rel="stylesheet" href="/static/css/normalize.css" />
     <link rel="stylesheet" href="/static/fonts/fontstylesheet.css" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
-    
-  
+
+
 
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
@@ -34,7 +34,7 @@
                     <li class="nav-item">
                         <a class="nav-link" href="/horarios">PROGRAMA</a>
                     </li>
-                  
+
                      <li class="nav-item">
                         <a class="nav-link" href="/informacion">INFORMACIÓN</a>
                     </li>
@@ -109,88 +109,42 @@
             <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
 
 
-                <h3> Sala 1</h3>
 
                 <div class="speakersContainer">
 
-                    {% for c in carteles %}
-                        {{ c }}
+                    {% for c in carteles_1 %}
+                    {{ c }}
                     {% endfor %}
 
                 </div>
-
-
-
-                </div>
-
-
             </div>
-
-            </div>
-            </div>
-
-
-
-
-
-
-
             <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">
-                <figure type="button" class="btn horarioFigure" data-bs-toggle="modal" data-bs-target="#exampleModal2"><img class="img-fluid" src="../static/img/PROGRAMA%20FINAL%20V-9%20AGOSTO%202021_Pa%CC%81gina_11.jpg"></figure>
 
 
-                <!-- Modal -->
-                <div class="modal fade" id="exampleModal2" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                    <div class="modal-dialog modal-xl">
-                        <div class="modal-content">
+                <div class="speakersContainer">
 
-                            <div class="modal-body">
-                                <figure><img class="img-fluid" src="../static/img/PROGRAMA%20FINAL%20V-9%20AGOSTO%202021_Pa%CC%81gina_11.jpg"></figure>
-                            </div>
+                    {% for c in carteles_2 %}
+                    {{ c }}
+                    {% endfor %}
 
-                        </div>
-                    </div>
-                </div>
-
-
-
-            </div>
-
-
-
-
-
-        <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">
-            <figure type="button" class="btn horarioFigure" data-bs-toggle="modal" data-bs-target="#exampleModal2"><img class="img-fluid" src="../static/img/PROGRAMA%20FINAL%20V-9%20AGOSTO%202021_Pa%CC%81gina_11.jpg"></figure>
-
-
-            <!-- Modal -->
-            <div class="modal fade" id="exampleModal2" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                <div class="modal-dialog modal-xl">
-                    <div class="modal-content">
-
-                        <div class="modal-body">
-                            <figure><img class="img-fluid" src="../static/img/PROGRAMA%20FINAL%20V-9%20AGOSTO%202021_Pa%CC%81gina_11.jpg"></figure>
-                        </div>
-
-                    </div>
                 </div>
             </div>
+            <div class="tab-pane fade" id="pills-contact" role="tabpanel" aria-labelledby="pills-contact-tab">
 
 
+                <div class="speakersContainer">
 
+                    {% for c in carteles_3 %}
+                    {{ c }}
+                    {% endfor %}
+
+                </div>
+            </div>
         </div>
 
+
     </div>
-
-
-
-
-
-
-
-
-
+</div>
 </body>
 
 
@@ -212,6 +166,6 @@
 
     }
 </script>
-    
-     
+
+
 </html>

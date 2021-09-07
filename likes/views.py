@@ -32,11 +32,25 @@ def registrar_like(request, id_cartel):
 
 def cargar_carteles(request):
     if request.user.is_authenticated:
-        carteles = Cartel.objects.all()
-        html = []
-        for cartel in carteles:
-            html.append(cartel.generar_cartel(request.user.id))
+        carteles_1 = Cartel.objects.filter(dia=1)
+        carteles_2 = Cartel.objects.filter(dia=2)
+        carteles_3 = Cartel.objects.filter(dia=3)
+        html_1 = []
+        for cartel in carteles_1:
+            html_1.append(cartel.generar_cartel(request.user.id))
 
-        return render( request, 'expo.html', {'carteles': html })
+        html_2 = []
+        for cartel in carteles_2:
+            html_2.append(cartel.generar_cartel(request.user.id))
+
+        html_3 = []
+        for cartel in carteles_3:
+            html_3.append(cartel.generar_cartel(request.user.id))
+
+        return render( request, 'expo.html', {
+            'carteles_1': html_1,
+            'carteles_2': html_2,
+            'carteles_3': html_3
+         })
     else:
         return redirect('%s?next=%s' % (settings.LOGIN_URL, request.path))
