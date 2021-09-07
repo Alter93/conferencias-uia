@@ -67,11 +67,21 @@
 
       <div class="barraAvisos fixed-bottom">
         <div><h3 class="bold">EN VIVO AHORA:</h3>
-            <div class="marquee">
-            <h4><span id="envivo">Por el momento no hay conferencias en vivo.<span> </h4>
+            <div class="textoScroll bg-text-container">
+                <h4 class='animate-text left'><span id="envivo">Por el momento no hay conferencias en vivo.</span> </h4>
                 </div>
                 </div>
     </div>
+            
+            
+             <div class=" textoScroll bg-text-container">
+            <div class="animate-text left">
+                <span>Por el momento no hay conferencias en vivo.&nbsp; </span>
+                <span>Por el momento no hay conferencias en vivo.&nbsp; </span>
+                <span>Por el momento no hay conferencias en vivo.&nbsp; </span>
+            </div>
+        </div>
+            
 
 
     <div class="dosColumnas row g-12 mainContent container">
@@ -99,9 +109,7 @@
             <li class="nav-item" role="presentation">
                 <button class="nav-link" id="pills-profile-tab" data-bs-toggle="pill" data-bs-target="#pills-profile" type="button" role="tab" aria-controls="pills-profile" aria-selected="false">Día 2</button>
             </li>
-            <li class="nav-item" role="presentation">
-                <button class="nav-link" id="pills-contact-tab" data-bs-toggle="pill" data-bs-target="#pills-contact" type="button" role="tab" aria-controls="pills-contact" aria-selected="false">Día 3</button>
-            </li>
+           
         </ul>
 
 
@@ -129,17 +137,7 @@
 
                 </div>
             </div>
-            <div class="tab-pane fade" id="pills-contact" role="tabpanel" aria-labelledby="pills-contact-tab">
-
-
-                <div class="speakersContainer">
-
-                    {% for c in carteles_3 %}
-                    {{ c }}
-                    {% endfor %}
-
-                </div>
-            </div>
+            
         </div>
 
 

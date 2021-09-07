@@ -59,6 +59,60 @@ nav-link:active {
 }
 
 
+.bg-text-container {
+    transform: translateX(-50%);
+    left: 50%;
+    position: absolute;
+    z-index: 999;
+}
+
+@keyframes text-scrolling {
+    0% {
+        transform: translate3d(-100%, 0, 0);
+    }
+
+    100% {
+        transform: translate3d(0%, 0, 0);
+    }
+}
+
+.animate-text {
+    animation: text-scrolling 25s linear infinite;
+    will-change: transform;
+    display: block;
+    position: relative;
+    white-space: nowrap;
+}
+
+.animate-text.left {
+    animation-direction: reverse;
+}
+
+.animate-text span {
+    font-size: 3vh;
+    display: inline-block;
+    line-height: .85;
+    min-width: auto;
+}
+
+
+.textoScroll {
+    min-height: 3vh;
+    overflow: hidden;
+    position: relative;
+    background: #FFC802;
+    color: black;
+}
+
+
+
+
+
+
+
+
+
+
 
 
 .dosColumnas {
