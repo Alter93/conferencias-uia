@@ -162,6 +162,7 @@ nav-link:active {
     position:relative; 
     display:block; 
     height: 800px;
+    min-width: 420px;
 }
 
 .decoTecho{
