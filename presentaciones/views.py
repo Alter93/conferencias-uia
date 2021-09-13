@@ -19,10 +19,7 @@ chat_ids[5] = "KDoi834zH"
 
 # Create your views here.
 def home(request):
-    if request.user.is_authenticated:
-        return render(request, 'home.html', {})
-    else:
-        return redirect('%s?next=%s' % (settings.LOGIN_URL, request.path))
+    return render(request, 'home.html', {})
 
 def en_vivo(request):
     fecha = timezone.now()
@@ -52,22 +49,13 @@ def en_vivo(request):
     return HttpResponse(texto_en_vivo)
 
 def horarios(request):
-    if request.user.is_authenticated:
-        return render(request, 'horarios.html', {})
-    else:
-        return redirect('%s?next=%s' % (settings.LOGIN_URL, request.path))
+    return render(request, 'horarios.html', {})
 
 def informacion(request):
-    if request.user.is_authenticated:
-        return render(request, 'informes.html', {})
-    else:
-        return redirect('%s?next=%s' % (settings.LOGIN_URL, request.path))
+    return render(request, 'informes.html', {})
 
 def ponentes(request):
-    if request.user.is_authenticated:
-        return render(request, 'ponentes.html', {})
-    else:
-        return redirect('%s?next=%s' % (settings.LOGIN_URL, request.path))
+    return render(request, 'ponentes.html', {})
 
 def conferencia(request, conf_uid):
     if request.user.is_authenticated:
