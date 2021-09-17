@@ -10,12 +10,12 @@ from django.utils.safestring import mark_safe
 from presentaciones.presentacion_util import ConferenciaZoom
 
 chat_ids = ["str"] * 6
-chat_ids[0] = "5P0zQBeDb"
-chat_ids[1] = "WoK1w_ogm"
-chat_ids[2] = "VptaZdj3F"
-chat_ids[3] = "CmjkD-okh"
-chat_ids[4] = "jH9b6e_x4"
-chat_ids[5] = "KDoi834zH"
+chat_ids[0] = "iovO1M8DZ"
+chat_ids[1] = "iovO1M8DZ"
+chat_ids[2] = "iovO1M8DZ"
+chat_ids[3] = "iovO1M8DZ"
+chat_ids[4] = "iovO1M8DZ"
+chat_ids[5] = "iovO1M8DZ"
 
 # Create your views here.
 def home(request):
