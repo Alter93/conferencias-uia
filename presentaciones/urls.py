@@ -7,7 +7,7 @@ urlpatterns = [
     path('informacion', views.informacion, name='info'),
     path('horarios', views.horarios, name='horarios'),
 
-    #path('conferencia/sala/<int:id_sala>', views.visitar_sala, name='sala'),
-    #path('conferencia/<uuid:conf_uid>', views.conferencia, name='conferencia'),
-    #path('conferencia/envivo', views.en_vivo, name='envivo'),
+    path('conferencia/sala/<int:id_sala>', views.visitar_sala, name='sala'),
+    path('conferencia/<uuid:conf_uid>', views.conferencia, name='conferencia'),
+    path('conferencia/envivo', views.en_vivo, name='envivo'),
 ]
