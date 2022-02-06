@@ -17,7 +17,7 @@ def cargar_usuarios(request):
                 apellido = "NA",
                 email = row['CORREO'],
                 comunidad = "NA",
-                cantidad_pagada = "NA"
+                cantidad_pagada = 1.0
             )
 
             registro.save()
