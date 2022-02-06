@@ -7,17 +7,17 @@ from prerregistro.models import Prerregistro
 # Create your views here.
 def cargar_usuarios(request):
 
-    df = pd.read_csv("prerregistro/reporte_psicologia.csv")
+    df = pd.read_csv("prerregistro/lista_usuarios.csv")
 
 
     for i,row in df.iterrows():
         try:
             registro = Prerregistro(
-                nombre = row['nombre'],
-                apellido = row['apellido'],
-                email = row['email'],
-                comunidad = row['comunidad'],
-                cantidad_pagada = row['cantidad_pagada']
+                nombre = row['NOMBRE'],
+                apellido = "NA",
+                email = row['CORREO'],
+                comunidad = "NA",
+                cantidad_pagada = "NA"
             )
 
             registro.save()

@@ -1,14 +1,6 @@
 import uuid
 from django.db import models
 
-zoom_ids = ["str"] * 6
-zoom_ids[0] = "95939461461"
-zoom_ids[1] = "99519545076"
-zoom_ids[2] = "95348682305"
-zoom_ids[3] = "98678788065"
-zoom_ids[4] = "93652940756"
-zoom_ids[5] = "93079922330"
-
 # Create your models here.
 class Conferencista(models.Model):
     id = models.BigAutoField(primary_key=True)
@@ -35,6 +27,6 @@ class Conferencia(models.Model):
 
     def save(self, *args, **kwargs):
         if self.zoom_id == None:
-            self.zoom_id = zoom_ids[int(self.lugar)]
-            
+            self.zoom_id = "uLmPnSLvij8"
+
         super().save(*args, **kwargs)
