@@ -4,6 +4,11 @@ body {
     overflow-x: hidden;
      font-family: 'gilroylight', Arial, sans-serif !important; 
        background-color: #E64049 !important;
+    background: no-repeat center center fixed url("/static/img/fondoLogin.svg");
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
 
 }
 
@@ -108,8 +113,6 @@ nav-link:active {
 }
 
 
-
-
 .dosColumnas {
     align-items: center;
     margin: 0 auto !important;
@@ -121,7 +124,7 @@ nav-link:active {
 }
 
 .dosColumnas p {
-    color: #231F20;
+    color: #fff;
     max-width: 580px;
     line-height: 1.2;
     font-size: 1.3em;
@@ -144,7 +147,7 @@ nav-link:active {
     flex-direction: row;
     flex-wrap: wrap;
     min-height: 60vh;
-    height: 800px;
+    height: auto;
     width: 100%;
     justify-content: center;
     background-color: black;
@@ -154,8 +157,9 @@ nav-link:active {
    padding-bottom:10%; 
     position:relative; 
     display:block; 
-    max-width: 60%;
-    height: 800px;
+    max-width: 90%;
+    height: auto;
+    border: 4px solid #F08B22
 }
 
 #chat{
@@ -167,14 +171,33 @@ nav-link:active {
 
 .decoTecho{
 background: url("/static/img/techo_sala.jpg") no-repeat center center;
-    height: 200px;
+    height: 140px;
     width: 100%;
-    
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
 }
 
 .decoPublico{
 background: url("/static/img/publico_sala3.jpg") no-repeat center center;
-    height: 400px;
+    height: 300px;
     width: 100%;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    
+}
+
+@media (max-width: 1500px) {
+    
+    .decoPublico{
+    height: 200px;
+        -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
     
 }

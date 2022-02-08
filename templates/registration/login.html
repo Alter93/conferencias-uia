@@ -16,71 +16,75 @@
 <body>
 
     <div class="mobileHide">
-                <div class="midColumn">
-                    <figure class="tituLogo"><img src="/static/img/logo_IberoEducacion_Blanco.png"></figure>
-                   <h1> MACRO<br> CLAUSURA<br> <span class="titleTransp">VIRTUAL </span><br>
-                       <span>DE DIPLOMADOS</span></h1>
-
-                </div>
-        
-<div class="contenedorLogin">
+        <div class="midColumn">
+            <figure class="tituLogo"><img src="/static/img/logo_IberoEducacion_Blanco.png"></figure>
+            <h1> MACRO<br> CLAUSURA<br> <span class="titleTransp">VIRTUAL </span><br>
+                <span>DE DIPLOMADOS</span>
+            </h1>
 
 
-                    {% if form.errors %}
-
-                    <p>Usuario y/o password incorrecto. Vuelva a intentarlo.</p>
-                    {% endif %}
-
-                    {% if next %}
-                    {% if user.is_authenticated %}
-                    <p>No tienes suficientes privilegios para ver la página.</p>
-
-                    {% endif %}
-                    {% endif %}
+            <div class="contenedorLogin">
 
 
+                {% if form.errors %}
 
-                    <form method="post" action="{% url 'login' %}">
-                        {% csrf_token %}
+                <p>Usuario y/o password incorrecto. Vuelva a intentarlo.</p>
+                {% endif %}
 
-                        <div class="formularioInputs">
-                            <label for="id_username">CORREO:</label>
-                            <input type="text" name="username" autofocus autocapitalize="none" autocomplete="username" maxlength="150" required id="id_username">
-                        </div>
-                        <div class="formularioInputs">
-                            <label for="id_password">CONTRASEÑA:</label>
-                            <input type="password" name="password" autocomplete="current-password" required id="id_password">
-                        </div>
+                {% if next %}
+                {% if user.is_authenticated %}
+                <p>No tienes suficientes privilegios para ver la página.</p>
+
+                {% endif %}
+                {% endif %}
 
 
-                        <div class="botonSubmit">
-                            <input type="submit" value="ENTRAR" />
-                            <input type="hidden" name="next" value="{{ next }}" />
-                        </div>
-                    </form>
-                     
-                </div>        
-        
-         <div class="hidFooter">
-            <figure><img src="/static/img/Logo_IberoEducacion.png"></figure>
-                <p>Sitio anexo a la Dirección de Educación Continua de la Universidad Iberoamericana Ciudad de México. <a href="https://www.diplomados.ibero.mx">www.diplomados.ibero.mx</a>. Consulta nuestro aviso de privacidad <a href="https://diplomados.ibero.mx/Miscelaneos/Aviso-de-privacidad.aspx">aquí</a>.</p>
+
+                <form method="post" action="{% url 'login' %}">
+                    {% csrf_token %}
+
+                    <div class="formularioInputs">
+                        <label for="id_username">CORREO:</label>
+                        <input type="text" name="username" autofocus autocapitalize="none" autocomplete="username" maxlength="150" required id="id_username">
                     </div>
-    
+                    <div class="formularioInputs">
+                        <label for="id_password">CONTRASEÑA:</label>
+                        <input type="password" name="password" autocomplete="current-password" required id="id_password">
+                    </div>
+
+
+                    <div class="botonSubmit">
+                        <input type="submit" value="ENTRAR" />
+                        <input type="hidden" name="next" value="{{ next }}" />
+                    </div>
+                </form>
+
+            </div>
+
+        </div>
+
+
+        <div class="hidFooter">
+            <figure><img src="/static/img/Logo_IberoEducacion.png"></figure>
+            <p>Sitio anexo a la Dirección de Educación Continua de la Universidad Iberoamericana Ciudad de México. <a href="https://www.diplomados.ibero.mx">www.diplomados.ibero.mx</a>. Consulta nuestro aviso de privacidad <a href="https://diplomados.ibero.mx/Miscelaneos/Aviso-de-privacidad.aspx">aquí</a>.</p>
+        </div>
+
     </div>
-    
-    
+
+
     <div class="mainContainerLogin">
 
-      
+
 
         <div class="rightSide">
             <div class="TituloyLogin">
 
-                
+
                 <div class="midColumn">
-                     <figure class="tituLogo"><img src="/static/img/logo_IberoEducacion_Blanco.png"></figure>
-                   <h1> MACRO<br> CLAUSURA<br> <span class="titleTransp">VIRTUAL </span><br>
-                       <span>DE DIPLOMADOS</span></h1>
+                    <figure class="tituLogo"><img src="/static/img/logo_IberoEducacion_Blanco.png"></figure>
+                    <h1> MACRO<br> CLAUSURA<br> <span class="titleTransp">VIRTUAL </span><br>
+                        <span>DE DIPLOMADOS</span>
+                    </h1>
                 </div>
 
 
@@ -119,30 +123,30 @@
                             <input type="hidden" name="next" value="{{ next }}" />
                         </div>
                     </form>
-                     
+
                 </div>
-                
+
             </div>
 
             <footer>
                 <div>
-            <figure><img src="/static/img/Logo_IberoEducacion.png"></figure>
-                <p>Sitio anexo a la Dirección de Educación Continua de la Universidad Iberoamericana Ciudad de México. <a href="https://www.diplomados.ibero.mx">www.diplomados.ibero.mx</a>. Consulta nuestro aviso de privacidad <a href="https://diplomados.ibero.mx/Miscelaneos/Aviso-de-privacidad.aspx">aquí</a>.</p>
-                    </div>
+                    <figure><img src="/static/img/Logo_IberoEducacion.png"></figure>
+                    <p>Sitio anexo a la Dirección de Educación Continua de la Universidad Iberoamericana Ciudad de México. <a href="https://www.diplomados.ibero.mx">www.diplomados.ibero.mx</a>. Consulta nuestro aviso de privacidad <a href="https://diplomados.ibero.mx/Miscelaneos/Aviso-de-privacidad.aspx">aquí</a>.</p>
+                </div>
             </footer>
         </div>
     </div>
-    
-     <!-- Modal Chat ayuda -->
-<div class="modal fade" id="videoModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog modal-lg modal-dialog-centered">
-    <div class="modal-content">
-      <div class="modal-body">
-       <iframe src="https://deadsimplechat.com/JCDCiGMUe" width="100%" height="600px"></iframe>
-      </div>
+
+    <!-- Modal Chat ayuda -->
+    <div class="modal fade" id="videoModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <iframe src="https://deadsimplechat.com/JCDCiGMUe" width="100%" height="600px"></iframe>
+                </div>
+            </div>
+        </div>
     </div>
-  </div>
-</div>
 
 </body>
 
