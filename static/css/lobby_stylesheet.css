@@ -3,7 +3,12 @@ body {
     padding: 0;
     overflow-x: hidden;
      font-family: 'gilroylight', Arial, sans-serif !important; 
-     background-color: lightgray !important;
+    background: repeat center center fixed url("/static/img/fondoLogin.svg");
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    background-color: #E74729;
 
 }
 
@@ -151,9 +156,65 @@ margin: 0 auto;
     left: 0;
 }
 
+
+
+.menuExplicit{
+    display: none;
+    width: 100%;
+    height: auto;
+    flex-direction: column;
+    flex-wrap:nowrap;
+    justify-content: flex-start;
+    position: absolute;
+    bottom: 0;
+    
+    
+}
+
+.menuExplicit a{
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    font-size: 1.8rem;
+    text-decoration: none;
+    transition: 1s;
+    font-weight: bold;
+    border: 1px solid #FAC14D;
+}
+
+.menuExplicit a:hover{
+    color: #1c1a1a;
+    background-color: #FAC14D;
+    padding: 10px 20px;
+    text-align: center;
+    font-size: 1.8rem;
+    text-decoration: none;
+}
+
+
+
 footer {
     background-color: black;
     width: 100%;
     height: 200px;
 
+}
+
+
+@media (max-width: 768px) {
+    .menuExplicit{
+        display: flex;
+    }
+    
+    .menuExplicit a{
+    color: white;
+    padding: 5px 10px;
+    text-align: center;
+    font-size: 1.2rem;
+    text-decoration: none;
+    transition: 1s;
+    font-weight: bold;
+    border: 1px solid #FAC14D;
+}
+    
 }
