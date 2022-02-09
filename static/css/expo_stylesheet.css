@@ -115,6 +115,19 @@ nav-link:active {
     margin: 0 auto !important;
 }
 
+.titule{
+    color: #fff !important;
+    margin-bottom: 25px;
+    text-align: center;
+    padding: 15px;
+    background-color: #E64049 !important;
+    background: no-repeat center center fixed url("/static/img/fondoLogin.svg");
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
 .dosColumnas div {
     height: 100%;
 }
@@ -131,9 +144,16 @@ nav-link:active {
 }
 
 .avisos h2{
-    color: #E64049;
+    color: #fff;
     margin-bottom: 25px;
-    text-align: center
+    text-align: center;
+    padding: 15px;
+    background-color: #E64049 !important;
+    background: no-repeat center center fixed url("/static/img/fondoLogin.svg");
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
 }
 
 .listas{
