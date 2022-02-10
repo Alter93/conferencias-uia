@@ -18,11 +18,18 @@ chat_ids[4] = "jH9b6e_x4"
 chat_ids[5] = "KDoi834zH"
 
 # Create your views here.
+def inicio(request):
+    if request.user.is_authenticated:
+        return render(request, 'home.html', { "inicio" : True })
+    else:
+        return redirect('%s?next=%s' % (settings.LOGIN_URL, request.path))
+
+
 def home(request):
     if request.user.is_authenticated:
         return render(request, 'home.html', {})
     else:
-        return redirect('%s?next=%s' % (settings.LOGIN_URL, request.path))
+        return redirect('%s?next=%s' % (settings.LOGIN_URL, "/inicio"))
 
 def en_vivo(request):
     fecha = timezone.now()

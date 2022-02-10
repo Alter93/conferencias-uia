@@ -3,6 +3,7 @@ from presentaciones import views
 
 urlpatterns = [
     path('', views.home, name='home'),
+    path('inicio', views.inicio, name='inicio'),
     path('index', views.home, name='home'),
     path('informacion', views.informacion, name='info'),
     path('horarios', views.horarios, name='horarios'),

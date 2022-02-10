@@ -29,7 +29,7 @@
                     <li class="nav-item">
                         <a class="nav-link" href="/">LOBBY</a>
                     </li>
-                   
+
 
                      <li class="nav-item">
                         <a class="nav-link" href="/informacion">INFORMACIÓN</a>
@@ -46,7 +46,7 @@
                             <li><a class="dropdown-item" href="/conferencia/sala/0">SALA 5 MYT</a></li>
                         </ul>
                     </li>
-                     
+
                      <li class="nav-item">
                         <a class="nav-link" href="/accounts/logout">SALIR</a>
                     </li>
@@ -55,7 +55,7 @@
         </div>
     </nav>
 
-   
+
 
 
 
@@ -78,7 +78,7 @@
                 </g>
                 <g class="hover_group" opacity="0">
                     <a xlink:href="/conferencia/sala/0">
-                        
+
 <rect x="1068.91" y="687.34" class="st0" width="354.38" height="243.06" opacity="0.3" fill="#FFFFFF" />
                     </a>
                 </g>
@@ -92,27 +92,27 @@
                         <polygon class="st0" points="1848.15,782.32 1982.96,787.43 1982.96,974.32 1848.15,955.94 " opacity="0.3" fill="#FFFFFF" />
                     </a>
                 </g>
-             
+
                 <g class="hover_group" opacity="0">
                     <a xlink:href="/informacion">
                         <polygon class="st0" points="1074.02,998.83 1074.02,1318.49 945.34,1292.96 945.34,990.66 " opacity="0.3" fill="#FFFFFF" />
                     </a>
                 </g>
-              
+
                    <g class="hover_group" opacity="0">
                     <a data-bs-toggle="modal" data-bs-target="#videoModal" xlink:href="#">
                         <rect x="1048.49" y="344.19" class="st0" width="331.91" height="229.79" opacity="0.3" fill="#000" />
                     </a>
                 </g>
-               
-                
-            
+
+
+
 
             </svg>
         </figure>
     </div>
 
-    
+
     <div class="menuExplicit">
         <a href="/informacion">Información</a>
         <a href="/conferencia/sala/1">Sala 1</a>
@@ -120,10 +120,10 @@
         <a href="/conferencia/sala/3">Sala 3</a>
         <a href="/conferencia/sala/4">Sala 4</a>
         <a href="/conferencia/sala/0">Sala 5 MYT</a>
-    
-    
+
+
     </div>
-    
+
 
     <!-- Modal Video -->
 <div class="modal fade" id="videoModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -140,3 +140,9 @@
 </body>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
+<script>
+    var myModal = new bootstrap.Modal(document.getElementById('videoModal'))
+    {% if inicio %}
+        myModal.show()
+    {% endif %}
+</script>
