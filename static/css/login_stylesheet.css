@@ -8,7 +8,7 @@ body {
 
 .mobileHide {
     display: none;
-    background: repeat center center fixed url("/static/img/fondoLogin.svg");
+    background: repeat center center fixed url("/static/img/Macro2023.jpg");
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -44,7 +44,7 @@ body {
 }
 
 .mainContainerLogin {
-    background: no-repeat center center fixed url("/static/img/fondoLogin.svg");
+    background: no-repeat center center fixed url("/static/img/Macro2023.jpg");
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -96,15 +96,17 @@ body {
 }
 
 .tituLogo {
-    width: 240px;
+    width: 100%;
     margin: 0
 }
 
 .tituLogo img {
-    width: 100%
+    width: 100%;
+    min-width: 40vw;
 }
 
 .midColumn h1 {
+    display: none;
     font-size: 3.8em;
     font-weight: bold;
     color: white;
