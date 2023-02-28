@@ -2,13 +2,13 @@ body {
     margin: 0;
     padding: 0;
     overflow-x: hidden;
-     font-family: 'gilroylight', Arial, sans-serif !important; 
+     font-family: 'alveratainformaluploaded_file', Arial, sans-serif !important; 
 
 }
 
 .bold{
     font-weight: bolder;
-    font-family: 'gilroyextrabold', Arial, sans-serif !important; 
+    font-family: 'alverata-bolduploaded_file', Arial, sans-serif !important; 
 }
 
 /*  Menú global   */
@@ -175,14 +175,7 @@ nav-link:active {
 
 /* TABLES Y FONTS */
 
-.bold{
-    font-weight: bolder;
-    font-family: 'gilroyextrabold', Arial, sans-serif !important; 
-}
 
-body{
- font-family: 'gilroylight', Arial, sans-serif !important; 
-}
 
 .grow{
     font-size: 1.3em; 
