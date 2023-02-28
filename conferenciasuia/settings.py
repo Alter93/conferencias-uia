@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-ea=j+ohy!3ohvz@l-6#+-$%y)=6i0muymqa*x3*o(ab8c!3so(
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [ '127.0.0.1', 'expo-diplomadosibero.com', '35.208.18.174']
 
 
 # Application definition
@@ -82,7 +82,7 @@ DATABASES = {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'conferenciasuia',
         'USER': 'root',
-        'PASSWORD': '',
+        'PASSWORD': 'Tobi4893$',
         'HOST': 'localhost',
         'PORT': '3306',
         'OPTIONS':{
@@ -128,6 +128,7 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.2/howto/static-files/
 
 STATIC_URL = '/static/'
+STATIC_ROOT = "/www/static/"
 
 STATICFILES_DIRS = (
     os.path.join(BASE_DIR, 'static'),

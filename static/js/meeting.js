@@ -26,7 +26,7 @@ function websdkready() {
     leaveUrl: redirect,
 
     role: 0,
-    lang: 'es-ES',
+    lang: 'en-US',
     china: 0,
   };
 
